@@ -1,0 +1,130 @@
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-600);
+  padding-block-start: var(--space-600);
+}
+
+.section-wrapper > img {
+  width: var(--destination-image);
+}
+
+.nav-destination {
+  text-transform: uppercase;
+  font-size: var(--fs-nav-destination);
+  letter-spacing: var(--space-25);
+}
+
+.nav-destination ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-400);
+}
+
+.nav-destination a {
+  display: block;
+  padding-block-end: var(--space-100);
+  border-bottom: var(--space-30) solid transparent;
+}
+
+.nav-destination a:hover {
+  border-bottom-color: var(--clr-light-hover);
+}
+
+.nav-destination a:focus-visible {
+  outline: var(--space-25) dotted var(--clr-light);
+}
+
+.nav-destination a:global(.active) {
+  border-bottom-color: var(--clr-white);
+  color: var(--clr-white);
+}
+
+.info-section {
+  text-align: center;
+  padding-block-start: var(--space-300);
+}
+
+.info-section > h2 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-weight: var(--fw-400);
+  font-family: var(--ff-bellfair);
+  font-size: var(--fs-heading-destination);
+  padding-block-end: var(--space-200);
+}
+
+.info-section hr {
+  border: none;
+  border-top: var(--space-25) solid var(--clr-light-hover);
+  margin-block: var(--space-300);
+}
+
+.info-section > p {
+  max-width: var(--para-max-width);
+}
+
+.description-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-300);
+}
+
+.description-list dt {
+  font-size: var(--fs-info-key);
+  text-transform: uppercase;
+  letter-spacing: var(--space-25);
+  padding-block-end: var(--space-100);
+}
+
+.description-list dd {
+  font-size: var(--fs-info-value);
+  color: var(--clr-white);
+  text-transform: uppercase;
+  font-family: var(--ff-bellfair);
+}
+
+@media (min-width: 48rem) {
+  .section-wrapper {
+    gap: var(--space-800);
+    padding-block-start: var(--space-800);
+  }
+  .description-list {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 64rem) {
+  .section-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    padding-block-start: var(--space-1600);
+    gap: var(--space-1200);
+  }
+
+  .info-section {
+    text-align: start;
+    padding-block-start: var(--space-500);
+  }
+
+  .info-section hr {
+    margin-block: var(--space-500);
+  }
+
+  .info-section > p {
+    max-width: 43ch;
+  }
+
+  .nav-destination ul {
+    justify-content: start;
+  }
+
+  .description-list {
+    justify-content: start;
+    gap: var(--space-1000);
+  }
+}

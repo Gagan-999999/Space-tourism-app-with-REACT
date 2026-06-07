@@ -1,0 +1,28 @@
+.section {
+  padding: clamp(var(--space-300), 4.5vw, var(--space-600));
+}
+
+.section h1 {
+  font-family: var(--ff-barlow);
+  font-weight: var(--fw-400);
+  text-transform: uppercase;
+  font-size: var(--fs-display-sm);
+  letter-spacing: var(--space-25);
+  color: var(--clr-white);
+  text-align: center;
+  max-width: var(--section-max-width);
+  margin-inline: auto;
+}
+
+.section h1 > span {
+  font-weight: var(--fw-700);
+  color: var(--clr-light-hover);
+  display: inline-block;
+  padding-inline-end: var(--space-150);
+}
+
+@media (min-width: 48rem) {
+  .section h1 {
+    text-align: start;
+  }
+}

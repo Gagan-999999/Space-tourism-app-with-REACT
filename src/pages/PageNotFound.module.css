@@ -1,0 +1,37 @@
+.page-not-found {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: var(--space-200);
+  padding: var(--space-400);
+}
+
+.page-not-found h1 {
+  font-size: var(--fs-display);
+}
+
+.page-not-found p {
+  max-width: 40ch;
+}
+
+.home-link {
+  display: block;
+  text-decoration: none;
+  justify-self: center;
+  color: var(--clr-white);
+  font-family: var(--ff-barlow-static);
+  font-weight: var(--fw-500);
+  border: var(--border) solid var(--clr-light);
+  padding: var(--space-150) var(--space-300);
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+
+.home-link:hover,
+.home-link:focus-visible {
+  outline: none;
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  box-shadow: 0 0 var(--space-100) var(--space-100) var(--clr-light-opaque);
+}
